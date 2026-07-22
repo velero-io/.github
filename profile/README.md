@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://github.com/velero-io/velero/releases"><img src="https://img.shields.io/github/v/release/velero-io/velero" alt="Latest Release"></a>
   <a href="https://github.com/velero-io/velero/stargazers"><img src="https://img.shields.io/github/stars/velero-io/velero" alt="GitHub Stars"></a>
-  <a href="https://kubernetes.slack.com/messages/velero"><img src="https://img.shields.io/badge/Slack-%23velero-4A154B" alt="Slack"></a>
+  <a href="https://kubernetes.slack.com/messages/velero-users"><img src="https://img.shields.io/badge/Slack-%23velero--users-4A154B" alt="Slack"></a>
   <a href="https://bestpractices.coreinfrastructure.org/projects/3811"><img src="https://bestpractices.coreinfrastructure.org/projects/3811/badge" alt="CII Best Practices"></a>
 </p>
 
@@ -25,7 +25,8 @@ Velero lets you:
 
 ## Community
 
-- [Slack](https://kubernetes.slack.com/messages/velero) - #velero channel on Kubernetes Slack
+- [#velero-users](https://kubernetes.slack.com/messages/velero-users) - User support on Kubernetes Slack
+- [#velero-dev](https://kubernetes.slack.com/messages/velero-dev) - Development discussion on Kubernetes Slack
 - [Community Meetings](https://velero.io/community/)
 - [Contributing](https://velero.io/docs/main/code-standards/)
 
