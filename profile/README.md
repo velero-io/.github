@@ -5,6 +5,7 @@
 <p align="center">
   <a href="https://github.com/velero-io/velero/releases"><img src="https://img.shields.io/github/v/release/velero-io/velero" alt="Latest Release"></a>
   <a href="https://github.com/velero-io/velero/stargazers"><img src="https://img.shields.io/github/stars/velero-io/velero" alt="GitHub Stars"></a>
+  <a href="https://hub.docker.com/r/velero/velero"><img src="https://img.shields.io/docker/pulls/velero/velero.svg" alt="Docker Pulls"></a>
   <a href="https://kubernetes.slack.com/messages/velero-users"><img src="https://img.shields.io/badge/Slack-%23velero--users-4A154B" alt="Slack"></a>
   <a href="https://bestpractices.coreinfrastructure.org/projects/3811"><img src="https://bestpractices.coreinfrastructure.org/projects/3811/badge" alt="CII Best Practices"></a>
 </p>
