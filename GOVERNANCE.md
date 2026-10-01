@@ -44,7 +44,9 @@ A maintainer may step down at any time by notifying the other maintainers, and i
 
 #### Removing a maintainer
 
-A maintainer may be removed by a supermajority of the existing maintainers.
+Maintainers may voluntarily step down as described above. A maintainer may also be removed involuntarily when the responsibilities and requirements of the role are not being met. This may include a repeated pattern of inactivity, an extended period of inactivity, a sustained failure to meet the responsibilities of the role, or a violation of the [Code of Conduct](#code-of-conduct). Involuntary removal protects the health of the project and its deliverables, and opens up opportunities for new contributors to step in.
+
+Involuntary removal is decided by a supermajority of the existing maintainers. When a maintainer is removed, their elevated access and permissions (for example GitHub, release, and infrastructure access) are revoked, and they are moved to the Emeritus Maintainers list in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md), or removed from it entirely in the case of removal for a Code of Conduct violation. Conduct-related concerns may also be reported to and handled through the [Code of Conduct](#code-of-conduct) contacts, independent of this process. A maintainer moved to emeritus status may return to active maintainer status through the nomination process above.
 
 #### Maintainer affiliations
 
