@@ -6,6 +6,10 @@ This document defines the project governance for Velero.
 
 **Velero**, an open source project, is committed to building an open, inclusive, productive and self-governing open source community focused on building a high quality tool that enables users to safely backup and restore, perform disaster recovery, and migrate Kubernetes cluster resources and persistent volumes. The community is governed by this document with the goal of defining how community should work together to achieve this goal.
 
+## Code of Conduct
+
+The Velero community abides by the [CNCF Code of Conduct](./CODE_OF_CONDUCT.md). All community members, including maintainers, contributors, and users, are expected to follow it in every project space and interaction.
+
 ## Code Repositories
 
 The following code repositories are governed by Velero community and maintained under the `velero-io` organization.
@@ -26,7 +30,29 @@ The following code repositories are governed by Velero community and maintained 
 
 ### Maintainers
 
-New maintainers must be nominated by an existing maintainer and must be elected by a supermajority of existing maintainers. Likewise, maintainers can be removed by a supermajority of the existing maintainers or can resign by notifying one of the maintainers.
+The current maintainers are listed in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md), along with their affiliation.
+
+#### Becoming a maintainer
+
+Contributors who have shown a sustained history of quality contributions to the project, code, code reviews, issue triage, proposal authoring and discussion, and community participation, may be nominated to become a maintainer. New maintainers must be nominated by an existing maintainer and must be elected by a supermajority of existing maintainers.
+
+#### Stepping down and emeritus status
+
+A maintainer may step down at any time by notifying the other maintainers, and is then moved to the Emeritus Maintainers list in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md). A maintainer who has been inactive in the project for an extended period (for example, six months) may be moved to emeritus status by a supermajority of the existing maintainers. Emeritus maintainers are recognized for their past contributions and may return to active maintainer status through the nomination process above.
+
+#### Removing a maintainer
+
+Maintainers may voluntarily step down as described above. A maintainer may also be removed involuntarily when the responsibilities and requirements of the role are not being met. This may include a repeated pattern of inactivity, an extended period of inactivity, a sustained failure to meet the responsibilities of the role, or a violation of the [Code of Conduct](#code-of-conduct). Involuntary removal protects the health of the project and its deliverables, and opens up opportunities for new contributors to step in.
+
+Involuntary removal is decided by a supermajority of the existing maintainers. When a maintainer is removed, their elevated access and permissions (for example GitHub, release, and infrastructure access) are revoked, and they are moved to the Emeritus Maintainers list in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md), or removed from it entirely in the case of removal for a Code of Conduct violation. Conduct-related concerns may also be reported to and handled through the [Code of Conduct](#code-of-conduct) contacts, independent of this process. A maintainer moved to emeritus status may return to active maintainer status through the nomination process above.
+
+#### Maintainer affiliations
+
+Maintainers must keep their affiliation in [MAINTAINERS.md](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md) current and update it within 30 days of any change of employer. Because votes are counted per company (see [Decision Making](#decision-making)), accurate affiliations are important to preserving the vendor neutrality of the project.
+
+### Function-based Teams
+
+Velero does not currently operate standing function-based sub-teams. Security vulnerability response is handled by the Velero Security Team as described in [SECURITY.md](./SECURITY.md), which documents the team's responsibilities and the report handling and triage process. Should the project establish additional role- or function-based teams in the future, their membership and their onboarding and offboarding processes will be documented here.
 
 ### Supermajority
 
