@@ -251,12 +251,14 @@ committer and release permissions.
 
 **TODO(team):** the incubation criteria ask for *documented assignment of security response roles* (who triages,
 who scores, who prepares the fix and release, who communicates, and the escalation path), modeled on the
-Kubernetes Security Response Committee. The current policy names the "Security Team" but not its members or
-responsibilities. Decide the roster and publish it in `SECURITY.md`.
+Kubernetes Security Response Committee. This PR adds a **Security Response Roles** section to `SECURITY.md` that
+defines the roles, responsibilities and escalation path. The current role holders are not yet named: fill in the
+roster in that section and confirm the role definitions.
 
-**TODO(team):** `SECURITY.md` states that only the most recent Velero version is supported, while the
+**TODO(team):** `SECURITY.md` previously stated that only the most recent Velero version is supported, while the
 [support process](https://velero.io/docs/main/support-process/) states best-effort support for the current and n-1
-minor versions. Align the two and state what security fixes are backported.
+minor versions. This PR aligns `SECURITY.md` with the support process (fixes released for the latest version,
+backported to n-1 on a best-effort basis). Confirm that policy, in particular that CVE fixes are backported to n-1.
 
 ### Incident response
 
@@ -283,9 +285,10 @@ will be assigned one.
 ### OpenSSF Best Practices
 
 * Project entry: <https://www.bestpractices.dev/projects/3811>. Passing-level criteria are recorded as 100%
-  complete, but the entry still points at the former `vmware-tanzu/velero` repository URL and was last filled in
-  against older criteria. **TODO(team):** update the repository URL to `velero-io/velero`, re-verify the answers
-  against the current criteria, and confirm the passing badge.
+  complete, but the entry still points at the former `vmware-tanzu/velero` repository URL and its answers were last
+  saved on 2020-08-31, against older criteria. **TODO(team):** an entry owner or admin must update the repository URL
+  to `velero-io/velero`, re-verify the answers against the current criteria, and confirm the passing badge. The
+  README badge link was moved to `bestpractices.dev` in [velero-io/velero#10683](https://github.com/velero-io/velero/pull/10683).
 * OpenSSF Scorecard (<https://scorecard.dev/viewer/?uri=github.com/velero-io/velero>) was 6.9 on 2026-10-22.
   Full marks: Code-Review, Token-Permissions, Dangerous-Workflow, Dependency-Update-Tool, Maintained,
   Security-Policy, CI-Tests, Binary-Artifacts, License, Packaging, Contributors. Open items:
