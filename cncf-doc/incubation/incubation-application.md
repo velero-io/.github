@@ -193,37 +193,41 @@ Note: this section may be augmented by the completion of a Governance Review.
 
 ### Suggested
 
-- [ ] **Roadmap change process is documented.**
+- [x] **Roadmap change process is documented.**
 
-<!-- (Project assertion goes here) --> 
+The process is documented in [`ROADMAP.md`](https://github.com/velero-io/velero/blob/main/ROADMAP.md) ("How the roadmap is maintained"). Larger features start as a design proposal in the [`design/`](https://github.com/velero-io/velero/tree/main/design) directory, following [`design/_template.md`](https://github.com/velero-io/velero/blob/main/design/_template.md), and are discussed on the pull request and in the community meetings before they are accepted. Feature requests and bugs are tracked as GitHub issues. The maintainers review priorities each release cycle and in the bi-weekly [community meetings](https://velero.io/community/), which are open to everyone. Anyone can propose a roadmap item by opening an issue or a design proposal, or by raising it in a community meeting.
 
-- [ ] **History of regular, quality releases.**
+- [x] **History of regular, quality releases.**
 
-<!-- (Project assertion goes here) --> 
+Minor releases over the last two years: v1.14.0 (2024-06-18), v1.15.0 (2024-11-06), v1.16.0 (2025-04-14), v1.17.0 (2025-09-15), v1.18.0 (2026-03-06), roughly every five to six months, with patch releases in between (for example v1.18.1 on 2026-05-19, v1.18.2 on 2026-06-26, v1.18.3 on 2026-09-21 and v1.18.4 on 2026-09-28). The full list is on the [releases page](https://github.com/velero-io/velero/releases). Release candidate and release criteria are documented in the [release instructions](https://velero.io/docs/main/release-instructions/#velero-release-requirements).
+
+<!-- TODO(team): the project does not publish a fixed release cadence; decide whether to state one, and add pointers to the evidence of release quality you want reviewers to see (for example e2e suites run per release). -->
 
 ### Required 
 
 - [ ] **Document project goals and objectives that illustrate the project’s differentiation in the Cloud Native landscape as well as outlines how this project fulfills an outstanding need and/or solves a problem differently. _This can also be satisfied by completing a General Technical Review._**
   - _If applicable_ a General Technical Review was completed/updated on DD-MMM-YYYY, and can be discovered at $LINK.
 
-<!-- (Project assertion goes here) --> 
+Not yet satisfied. The [`README.md`](https://github.com/velero-io/velero/blob/main/README.md) overview and the "Goals" section of [`ARCHITECTURE.md`](https://github.com/velero-io/velero/blob/main/ARCHITECTURE.md) describe the project's goals, but neither explains how Velero differs from other approaches in the cloud native landscape, and a General Technical Review has not been completed ([`general-technical-review.md`](./general-technical-review.md) is still the blank template).
 
-- [ ] **Document what the project does, and why it does it - including viable cloud native use cases. This can also be satisfied by completing a General Technical Review.**
+<!-- TODO(team): write the differentiation statement (the related-projects comparison in the self-assessment is also open) or complete the General Technical Review, then check this box. -->
 
-<!-- (Project assertion goes here) --> 
+- [x] **Document what the project does, and why it does it - including viable cloud native use cases. This can also be satisfied by completing a General Technical Review.**
 
-- [ ] **Document and maintain a public roadmap or other forward looking planning document or tracking mechanism.**
+The [`README.md`](https://github.com/velero-io/velero/blob/main/README.md) overview and [How Velero works](https://velero.io/docs/main/how-velero-works/) describe what Velero does: back up and restore Kubernetes cluster resources and persistent volumes, on a public cloud or on-premises. The README lists the use cases: taking backups of a cluster and restoring them in case of loss, migrating cluster resources to other clusters, and replicating a production cluster to development and testing clusters.
 
-<!-- (Project assertion goes here) --> 
+- [x] **Document and maintain a public roadmap or other forward looking planning document or tracking mechanism.**
 
-- [ ] **Document overview of project architecture and software design that demonstrates viable cloud native use cases, as part of the project's documentation. _This can also be satisfied by completing a General Technical Review and capturing the output in the project's documentation._**
+The roadmap is public in the project wiki: the current [Roadmap](https://github.com/velero-io/velero/wiki/Roadmap) page, a roadmap page per release (1.11 through 1.19), and archived roadmaps for earlier releases. [`ROADMAP.md`](https://github.com/velero-io/velero/blob/main/ROADMAP.md) in the repository points to it and was last updated on 2026-09-23. Release milestones are also tracked as GitHub milestones on the [`velero` repository](https://github.com/velero-io/velero/milestones).
+
+- [x] **Document overview of project architecture and software design that demonstrates viable cloud native use cases, as part of the project's documentation. _This can also be satisfied by completing a General Technical Review and capturing the output in the project's documentation._**
   - _If applicable_ a General Technical Review was completed/updated on DD-MMM-YYYY, and can be discovered at $LINK.
 
-<!-- (Project assertion goes here) --> 
+[`ARCHITECTURE.md`](https://github.com/velero-io/velero/blob/main/ARCHITECTURE.md) gives the architecture overview (how Velero works, goals, design proposals and related documents), and [How Velero works](https://velero.io/docs/main/how-velero-works/) in the documentation describes on-demand and scheduled backups, the backup and restore workflows, and object storage sync. Design proposals are kept in the [`design/`](https://github.com/velero-io/velero/tree/main/design) directory.
 
-- [ ] **Document the project's release process.**
+- [x] **Document the project's release process.**
 
-<!-- (Project assertion goes here) --> 
+The release process is documented in the [release instructions](https://velero.io/docs/main/release-instructions/): release requirements, release candidate and release criteria, preparing the changelog, docs and base image, tagging and publishing the release, and the Homebrew release. Plugins have their own [plugin release instructions](https://velero.io/docs/main/plugin-release-instructions/).
 
 ## Security
 
@@ -233,29 +237,37 @@ Note: this section may be augmented by a joint-assessment performed by TAG Secur
 
 - [ ] **Complete a joint security assessment with TAG Security and Compliance**
 
-<!-- (Project assertion goes here) --> 
+Not started. The draft [Security Self-Assessment](./security-self-assessment.md) is the prerequisite.
 
 ### Required
 
-- [ ] **Clearly defined and discoverable process to report security issues.**
+- [x] **Clearly defined and discoverable process to report security issues.**
 
-<!-- (Project assertion goes here) --> 
+[`SECURITY.md`](https://github.com/velero-io/.github/blob/main/SECURITY.md) in the organization's community health repository defines the private disclosure process. Reports go to cncf-velero-security@lists.cncf.io or through GitHub's private vulnerability reporting on the [Security tab](https://github.com/velero-io/velero/security/advisories/new) (enabled on `velero-io/velero`). It states that reports are addressed within 3 business days, describes the patch, release and public disclosure steps, and says not to file public issues for vulnerabilities. Past vulnerabilities are published as [GitHub security advisories](https://github.com/velero-io/velero/security/advisories).
 
 - [ ] **Enforcing Access Control Rules to secure the code base against attacks (Example: two factor authentication enforcement, and/or use of ACL tools.)**
 
-<!-- (Project assertion goes here) --> 
+Partly verified. The default branch of `velero-io/velero` is protected, and merging requires 2 approving reviews including code owner review (read from the branch protection settings in October 2026).
+
+<!-- TODO(team): an organization owner must confirm that two-factor authentication is required for the `velero-io` organization, and describe how release and registry credentials are scoped and who holds them. Then check this box. -->
 
 - [ ] **Document assignment of security response roles and how reports are handled.** _(This is distinct from the security reporting process above — document who is responsible for triaging and responding to reports, not just where to send them. For reference, see the [Kubernetes Security Response Committee](https://github.com/kubernetes/committee-security-response) as a model for named membership, documented responsibilities, and a clear escalation path.)_
 
-<!-- (Project assertion goes here) --> 
+Proposed, not yet final. This change adds a "Security Response Roles" section to [`SECURITY.md`](https://github.com/velero-io/.github/blob/main/SECURITY.md) defining the roles, their responsibilities and the escalation path.
+
+<!-- TODO(team): name the current role holders in SECURITY.md and confirm the role definitions, then check this box. -->
 
 - [ ] **Document [Security Self-Assessment](https://tag-security.cncf.io/community/assessments/guide/self-assessment/).**
 
-<!-- (Project assertion goes here) --> 
+Drafted in [`security-self-assessment.md`](./security-self-assessment.md) in this folder, with open items marked **TODO(team)**.
+
+<!-- TODO(team): resolve the TODO(team) items, then move the document to `cncf/toc` at `projects/velero/security-assessment/self-assessment.md` and check this box. -->
 
 - [ ] **Achieve the [Open Source Security Foundation (OpenSSF) Best Practices passing badge](https://www.bestpractices.dev/).** _(Link to your bestpractices.dev project page below.)_
 
-<!-- (Project assertion goes here) --> 
+The [bestpractices.dev entry (project 3811)](https://www.bestpractices.dev/projects/3811) currently shows the passing badge at 100%. The entry still lists the former `vmware-tanzu/velero` repository URL and its answers were last saved on 2020-08-31.
+
+<!-- TODO(team): an entry owner or admin updates the repository URL to `velero-io/velero` and re-verifies the answers against the current criteria, then check this box. -->
 
 ## Ecosystem
 
