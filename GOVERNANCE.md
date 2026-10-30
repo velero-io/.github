@@ -12,15 +12,14 @@ The Velero community abides by the [CNCF Code of Conduct](./CODE_OF_CONDUCT.md).
 
 ## Code Repositories
 
-The following code repositories are governed by Velero community and maintained under the `velero-io` organization.
+The following repositories and components are governed by the Velero community.
 
 * **[Velero](https://github.com/velero-io/velero):** Main Velero codebase
-* **[Helm Chart](https://github.com/vmware-tanzu/helm-charts/tree/main/charts/velero):** The Helm chart for the Velero server component
 * **[Velero Plugin for AWS](https://github.com/velero-io/velero-plugin-for-aws):** This repository contains the plugins to support running Velero on AWS, including the object store plugin and the volume snapshotter plugin
 * **[Velero Plugin for GCP](https://github.com/velero-io/velero-plugin-for-gcp):** This repository contains the plugins to support running Velero on GCP, including the object store plugin and the volume snapshotter plugin
 * **[Velero Plugin for Azure](https://github.com/velero-io/velero-plugin-for-microsoft-azure):** This repository contains the plugins to support running Velero on Azure, including the object store plugin and the volume snapshotter plugin
 * **[Velero Plugin Example](https://github.com/velero-io/velero-plugin-example):** This repository contains example plugins for Velero
-
+* **[.github](https://github.com/velero-io/.github):** Shared governance, community health files, and organization profile for the Velero project
 
 ## Community Roles
 
