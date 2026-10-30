@@ -207,8 +207,12 @@ etc.).
   Release artifacts and container images are **not** currently signed, and SBOM and provenance attestations are not
   published (build scripts set `--sbom=false` and `--provenance=false`). Commit signing is not required.
   **TODO(team):** confirm; these are the main gaps (see [Appendix](#appendix)).
-* **Static analysis and fuzzing.** No CodeQL/SAST workflow and no fuzzing are configured today.
-  **TODO(team):** confirm and decide on plan.
+* **Static analysis and fuzzing.** CodeQL static analysis for Go runs on pull requests, pushes to `main` and weekly
+  ([`codeql.yml`](https://github.com/velero-io/velero/blob/main/.github/workflows/codeql.yml), added in
+  [velero-io/velero#10695](https://github.com/velero-io/velero/pull/10695), merged 2026-10-30). Its findings are
+  informational for now; the check is not yet required. No fuzzing is configured today.
+  **TODO(team):** confirm whether and when to make the CodeQL check required (proposed: after the first few weeks,
+  once the `main` baseline is clean), and decide on a fuzzing plan.
 * **Access control.** Write access is limited to maintainers through the GitHub team referenced in `CODEOWNERS`.
   **TODO(team):** document that two-factor authentication is required for the `velero-io` organization after
   verifying the org setting, and describe how repository, release and registry credentials are scoped and rotated.
@@ -292,7 +296,8 @@ will be assigned one.
 * OpenSSF Scorecard (<https://scorecard.dev/viewer/?uri=github.com/velero-io/velero>) was 6.9 on 2026-10-22.
   Full marks: Code-Review, Token-Permissions, Dangerous-Workflow, Dependency-Update-Tool, Maintained,
   Security-Policy, CI-Tests, Binary-Artifacts, License, Packaging, Contributors. Open items:
-  * `SAST` (0): add CodeQL or equivalent.
+  * `SAST` (0): CodeQL was added in [velero-io/velero#10695](https://github.com/velero-io/velero/pull/10695); the score
+    should update on the next Scorecard run.
   * `Signed-Releases` (0): sign release artifacts and images (for example with cosign); publish SBOM and provenance.
   * `Fuzzing` (0): add fuzz targets for parsers and archive handling.
   * `Pinned-Dependencies` (3): pin remaining GitHub Actions and container base images by digest.
