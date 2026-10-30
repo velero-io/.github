@@ -5,7 +5,9 @@ Velero is an open source tool with a growing community devoted to safe backup an
 
 ## Supported Versions
 
-The Velero project maintains the following [governance document](https://github.com/velero-io/.github/blob/main/GOVERNANCE.md), [release document](https://github.com/velero-io/velero/blob/main/site/content/docs/main/release-instructions.md), and [support document](https://velero.io/docs/main/support-process/). Please refer to these for release and related details. Only the most recent version of Velero is supported. Each [release](https://github.com/velero-io/velero/releases) includes information about upgrading to the latest version.
+The Velero project maintains the following [governance document](https://github.com/velero-io/.github/blob/main/GOVERNANCE.md), [release document](https://github.com/velero-io/velero/blob/main/site/content/docs/main/release-instructions.md), and [support document](https://velero.io/docs/main/support-process/). Please refer to these for release and related details. Security fixes are released for the most recent version of Velero. Consistent with the [support process](https://velero.io/docs/main/support-process/), the maintainers provide best-effort support for the current and n-1 minor versions, including all patch releases; a security fix is backported to the n-1 minor version on a best-effort basis. Older versions are not supported. Each [release](https://github.com/velero-io/velero/releases) includes information about upgrading to the latest version.
+
+<!-- TODO(team): confirm this supported-versions wording and that CVE fixes are backported to n-1. -->
 
 
 ## Reporting a Vulnerability - Private Disclosure Process
@@ -24,6 +26,28 @@ To report a vulnerability or a security-related issue, please contact the email 
 ## Security Contacts
 
 Reports sent to cncf-velero-security@lists.cncf.io are triaged by the Velero Security Team and shared with the [Velero maintainers](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md), who hold committer and release permissions. Velero does not currently offer a bug bounty program.
+
+
+## Security Response Roles
+
+The Security Team assigns the following roles for each report. One person may hold more than one role, and the
+maintainers with committer and release permissions back up each role.
+
+| Role | Responsibilities |
+| --- | --- |
+| Security Response Lead | Acknowledges the report and starts the conversation with the reporter within 3 business days; owns the timeline and keeps the reporter informed; decides whether the report is a vulnerability. |
+| Triage and CVSS owner | Investigates the vulnerability, determines its effects and criticality, calculates the CVSS score, and requests the CVE. |
+| Fix owner | Prepares and reviews the fix in a private GitHub security advisory fork, performs internal testing, and confirms the affected and fixed versions. |
+| Release manager | Cuts the patch release that contains the fix, following the [release document](https://github.com/velero-io/velero/blob/main/site/content/docs/main/release-instructions.md). |
+| Communications owner | Negotiates the public disclosure date with the reporter, publishes the GitHub security advisory, and announces the fix through the channels listed under **Public Disclosure Process**. |
+
+If a report has not been acknowledged within 3 business days, the reporter may escalate by contacting the
+[Velero maintainers](https://github.com/velero-io/velero/blob/main/MAINTAINERS.md) directly, or by using GitHub's
+private vulnerability reporting feature on the repository's Security tab. If a role holder has a conflict of interest
+or is unavailable, the Security Response Lead reassigns the role to another maintainer.
+
+<!-- TODO(team): publish the current role holders here (names or GitHub handles) and confirm the role names, the
+escalation path, and that the cncf-velero-security@lists.cncf.io membership matches. -->
 
 
 ## Proposed Email Content
@@ -67,7 +91,7 @@ The Security Team will respond to vulnerability reports as follows:
 5. The Security Team will also create a [CVSS](https://www.first.org/cvss/specification-document) using the [CVSS Calculator](https://www.first.org/cvss/calculator/3.0). The Security Team makes the final call on the calculated CVSS; it is better to move quickly than making the CVSS perfect. Issues may also be reported to [Mitre](https://cve.mitre.org/) using this [scoring calculator](https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator). The CVE will initially be set to private.
 6. The Security Team will work on fixing the vulnerability and perform internal testing before preparing to roll out the fix.
 7. A public disclosure date is negotiated by the Security Team and the bug submitter. We prefer to fully disclose the bug as soon as possible once a user mitigation or patch is available. It is reasonable to delay disclosure when the bug or the fix is not yet fully understood, or the solution is not well-tested. The timeframe for disclosure is from immediate (especially if it’s already publicly known) to a few weeks. For a critical vulnerability with a straightforward mitigation, we expect the report date for the public disclosure date to be on the order of 14 business days. The Security Team holds the final say when setting a public disclosure date.
-8. Once the fix is confirmed, the Security Team will patch the vulnerability in the next patch or minor release. Per the **Supported Versions** policy above, only the most recent release line is supported, so no backport to earlier releases is guaranteed. Upon release of the patched version of Velero, we will follow the **Public Disclosure Process**.
+8. Once the fix is confirmed, the Security Team will patch the vulnerability in the next patch or minor release of the most recent version and, on a best-effort basis, the n-1 minor version, per the **Supported Versions** policy above. Upon release of the patched version of Velero, we will follow the **Public Disclosure Process**.
 
 
 ## Public Disclosure Process
