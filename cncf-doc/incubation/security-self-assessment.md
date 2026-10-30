@@ -116,10 +116,11 @@ Backup and restore hooks: [backup hooks](https://velero.io/docs/main/backup-hook
   [data mover limitations](https://velero.io/docs/main/csi-snapshot-data-movement/)).
 * Velero does not sandbox plugins from the server: a plugin runs in the server pod and can use the server's
   service account and credentials. Only install plugins you trust.
-* Velero does not provide tenant isolation inside a cluster. By default it runs with the `cluster-admin`
-  ClusterRole so it can back up and restore anything; narrowing this is the operator's responsibility.
-  **TODO(team):** confirm wording, in particular whether per-namespace access to `Backup`/`Restore` creation
-  is a goal or a non-goal.
+* By default, `velero install` binds the Velero server service account to the `cluster-admin` ClusterRole so it can
+  back up and restore any resource in the cluster; narrowing this is the operator's responsibility (see
+  [RBAC](https://velero.io/docs/main/rbac/)).
+  **TODO(team):** decide whether to state a tenancy position, for example whether tenant isolation or per-namespace
+  `Backup`/`Restore` access is a goal or a non-goal. Until then this document states only the default behavior.
 
 ## Self-assessment use
 
