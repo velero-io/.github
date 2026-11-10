@@ -21,6 +21,10 @@ The following repositories and components are governed by the Velero community.
 * **[Velero Plugin Example](https://github.com/velero-io/velero-plugin-example):** This repository contains example plugins for Velero
 * **[.github](https://github.com/velero-io/.github):** Shared governance, community health files, and organization profile for the Velero project
 
+### Dependency forks
+
+Velero uses [a fork of Kopia](https://github.com/velero-io/kopia) as a dependency, rather than a subproject. Velero maintainers manage its Velero-specific changes and dependency updates. Upstream Kopia has its own maintainers and governance.
+
 ## Community Roles
 
 * **Users:** Members that engage with the Velero community via any medium (Slack, GitHub, mailing lists, etc.).
