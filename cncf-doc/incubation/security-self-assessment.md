@@ -226,9 +226,13 @@ The project makes no compliance claims at this time.
   **TODO(team):** confirm whether and when to make the CodeQL check required (proposed: after the first few weeks,
   once the `main` baseline is clean).
 * **Access control.** Write access is normally granted through the maintainer team referenced in `CODEOWNERS`; a
-  small number of outside collaborators also hold direct write access. **TODO(team):** decide whether to remove those
-  direct write grants (adam-jian-zhang, Joeavaikath, chlins, priyansh17) or to record them, for example in
-  MAINTAINERS.md, so the access is documented rather than implicit. **TODO(team):** two-factor authentication
+  small number of outside collaborators also hold direct write access. **TODO(team):** document both the technically
+  granted permission (a direct collaborator grant of repository write, outside the maintainer team) and what
+  non-maintainer editors are expected and permitted to do with it (for example push their own branches and keep
+  merging subject to the required reviews), versus what stays with maintainers (releases, governance votes).
+  Transparency matters more than the grant itself: either record the holders, for example in MAINTAINERS.md, or
+  remove the grants. The common CNCF norm is that write (committer) access follows a role listed in the project's
+  governance docs, not an undocumented collaborator grant. **TODO(team):** two-factor authentication
   enforcement for the `velero-io` organization is not readable without org admin access
   (`two_factor_requirement_enabled` is null for non-admin tokens); an org owner must confirm it under Settings →
   Authentication security, then this document should state it, along with how repository, release and registry
