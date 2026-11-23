@@ -92,6 +92,8 @@ Votes by maintainers belonging to the same company count as one combined vote; f
 
 A company's combined vote is yes or no when at least two-thirds of the yes/no votes cast by maintainers from that company support that position. Abstentions and nonparticipation are excluded from this calculation. If neither position reaches that threshold, or no yes/no votes are cast within the company, the company abstains.
 
+For voting purposes, a parent company and all subsidiaries it directly or indirectly controls count as one company. For example, if two maintainers at the parent vote yes and two at a controlled subsidiary vote no, the company’s vote is recorded as an abstention.
+
 Only the resulting yes/no company votes and votes from unaffiliated maintainers count toward the final approval threshold. Companies that abstain or do not participate are excluded from that calculation.
 
 
